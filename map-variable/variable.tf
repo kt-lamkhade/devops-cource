@@ -7,5 +7,5 @@ variable "userage" {
 }
 variable "username" {
     type = string
-    default = "Saurav"
+    default = "saurav"
 }
