@@ -7,7 +7,7 @@ pipeline {
                 dir("${env.WORKSPACE}/map-variable/"){
                 sh 'terraform fmt'
                 sh 'terraform init'
-                sh 'terraform plan  --auto-approve'
+                sh 'terraform plan'
                 }
         }
             }
