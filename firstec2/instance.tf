@@ -12,10 +12,10 @@ resource "aws_security_group" "allow_tls" {
 
   dynamic "ingress" {
     for_each = [22, 80, 443]
-    iterator = prot
+    iterator = port
     content {
           description      = "TLS from VPC"
-          from_port        = prot.value
+          from_port        = port.value
           to_port          = port.value
           protocol         = "tcp"
           cidr_blocks      = ["0.0.0.0/0"]
