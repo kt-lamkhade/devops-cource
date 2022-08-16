@@ -8,19 +8,19 @@ pipeline {
                 sh 'terraform fmt'
                 sh 'terraform init -no-color'
                 sh 'terraform plan -no-color'
-                //sh 'terraform apply --auto-approve -no-color'
+                sh 'terraform apply --auto-approve -no-color'
                 }
             }
             }
         }
-        stage("apply"){
+       ''' stage("apply"){
            steps{
             script {
               input message: "Run Pipeline in following ", ok: "Run"
               sh 'terraform apply --auto-approve -no-color'  
             }
            } 
-        }
+        }'''
         }
 }
 
