@@ -7,8 +7,8 @@ pipeline {
                 dir("${env.WORKSPACE}/ec2-structure/"){
                 //sh 'terraform fmt'
                 //sh 'terraform init -no-color'
-                sh 'terraform plan  -destroy  --auto-approve -no-color'
-                //sh 'terraform destroy --auto-approve -no-color'
+                //sh 'terraform plan  -destroy  --auto-approve -no-color'
+                sh 'terraform destroy --auto-approve -no-color'
                 }
         }
             }
