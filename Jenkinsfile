@@ -13,14 +13,14 @@ pipeline {
             }
             }
         }
-       ''' stage("apply"){
-           steps{
-            script {
-              input message: "Run Pipeline in following ", ok: "Run"
-              sh 'terraform apply --auto-approve -no-color'  
-            }
-           } 
-        }'''
+       // stage("apply"){
+        //   steps{
+        //    script {
+        //      input message: "Run Pipeline in following ", ok: "Run"
+        //      sh 'terraform apply --auto-approve -no-color'  
+        //    }
+        //   } 
+        //}
         }
 }
 
