@@ -10,13 +10,18 @@ pipeline {
                 sh 'terraform plan -no-color'
                 //sh 'terraform apply --auto-approve -no-color'
                 }
-            steps {
-            script {
-              input message: "Run Pipeline in following , ok: "Run"
-              sh 'terraform apply --auto-approve -no-color'
-            }  
-        }
+            }
             }
         }
-    }
+        stage("apply"){
+           steps{
+            script {
+              input message: "Run Pipeline in following ", ok: "Run"
+              sh 'terraform apply --auto-approve -no-color'  
+            }
+           } 
+        }
+        }
 }
+
+
